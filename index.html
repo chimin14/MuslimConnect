@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muslim Connect</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Customization -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                kaushan: ['Kaushan Script', 'cursive'],
+                roboto: ['Roboto', 'sans-serif'],
+              },
+              colors: {
+                darkGreen: '#506D3B',
+                lightGreen: '#DDEBC7',
+                softGray: '#F0F0F0',
+                deepGray: '#555555',
+                orangeAccent: '#F97316',
+                blackMain: '#000000',
+              }
+            }
+          }
+        }
+    </script>
+
+    <style>
+        .hidden-sidebar {
+            transform: translateX(100%);
+        }
+
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-softGray text-blackMain">
+    <!-- Full-screen Header Section -->
+    <header class="relative w-full h-screen flex flex-col justify-between" style="background-image: url('images/isfahan.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+
+        <!-- Top Navigation -->
+        <div class="fixed-top bg-black bg-opacity-50 flex items-center justify-between px-4 py-4">
+            <!-- Logo and Title -->
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="Muslim Connect Logo" class="w-16 h-16 object-cover">
+                <h1 class="text-3xl font-kanit text-white ml-4">Muslim Connect</h1>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <nav class="flex space-x-4">
+                <a href="#home" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Home</a>
+                <a href="#about" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">About Us</a>
+                <a href="#mosques" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Mosques</a>
+                <a href="#hotels" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Hotels</a>
+                <a href="#restaurants" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Restaurants</a>
+                <a href="#events" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Events</a>
+                <a href="#contact" class="text-gray-300 hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Contact Us!</a>
+            </nav>
+
+            <!-- Sidebar Button -->
+            <button id="sidebarButton" class="p-2 text-black rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Sidebar Component -->
+        <div id="drawer-navigation" class="fixed top-0 right-0 z-50 w-64 h-screen bg-white dark:bg-gray-800 hidden-sidebar transition-transform duration-300 ease-in-out shadow-lg">
+            <!-- Sidebar Menu -->
+            <div class="py-4">
+                <ul class="space-y-2 font-medium">
+                    <li><a href="#home" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+                    <li><a href="#about" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">About Us</a></li>
+                    <li><a href="#mosques" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Mosques</a></li>
+                    <li><a href="#hotels" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Hotels</a></li>
+                    <li><a href="#restaurants" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Restaurants</a></li>
+                    <li><a href="#events" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Events</a></li>
+                    <li><a href="#contact" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="flex-grow flex items-center justify-center">
+            <div class="relative text-white text-center px-8">
+                <h1 class="text-9xl font-kanit mb-6">Welcome to Muslim Connect</h1>
+                <p class="text-3xl font-roboto leading-relaxed max-w-3xl mx-auto">
+                    At Muslim Connect, we are dedicated to bridging the gap between travelers and the local Muslim community. Whether you're searching for halal restaurants, mosques, or accommodations that cater to your needs, our platform is here to guide you.
+                </p>
+            </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="relative z-10 flex justify-center mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 animate-bounce" fill="white" viewBox="0 0 24 24" stroke="white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </header>
+
+
+
+
+
+<!--  Section: Restaurants, Hotels, and Mosques -->
+<section id="places" class="bg-gradient-to-b from-black to-darkGreen min-h-screen flex flex-col justify-center">
+    <!-- Restaurants Section -->
+    <div id="restaurants" class="w-full flex items-center justify-center mb-16">
+        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Restaurants</h2>
+    </div>
+
+    <div class="flex-grow flex items-center mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto">
+            <!-- Restaurant Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/sac.jpg" alt="Sač" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Sač</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Baščaršija 10, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 123456</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 10:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+            <!-- Restaurant Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/mrkva.jpg" alt="Mrkva" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Mrkva</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Baščaršija 12, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 654321</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 09:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            <!-- Restaurant Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/bazeni.jpg" alt="Bazeni" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Bazeni</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Obala Kulina Bana 8, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 789456</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 11:00 AM - 12:00 AM</p>
+                </div>
+            </div>
+            <!-- Restaurant Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/preporod.jpg" alt="Preporod" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Preporod</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Branilaca Sarajeva 30, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 789456</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 11:00 AM - 12:00 AM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-16 mb-8">
+        <div class="mx-auto rounded-full flex items-center justify-center mb-4">
+            <a href="https://www.tripadvisor.com/Restaurants-g294450-zfz10751-Sarajevo_Sarajevo_Canton_Federation_of_Bosnia_and_Herzegovina.html" target="_blank" class="text-white text-[20px] font-monserrat">
+                Discover more similar places
+            </a>
+        </div>
+    </div>
+    <!-- Hotels Section -->
+    <div id="hotels" class="w-full flex items-center justify-center mb-16">
+        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Hotels</h2>
+    </div>
+
+    <div class="flex-grow flex items-center">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto">
+            <!-- Hotel Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/inmariot.png" alt="Inn Mariott" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Inn Mariott</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Skenderija 10, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 987654</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 24/7</p>
+                </div>
+            </div>
+            <!-- Hotel Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/malak.png" alt="Hotel Malak" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Malak Regency</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Ilidza 9, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 876543</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 24/7</p>
+                </div>
+            </div>
+            <!-- Hotel Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/rose.png" alt="Rose Apartmani" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Rose Apartment</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Bjelasnica 15, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 765432</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 24/7</p>
+                </div>
+            </div>
+            <!-- Hotel Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/pino.png" alt="Pino" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Pino Nature</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Trebevic 20, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 654321</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 24/7</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-16 mb-8">
+    <div class="mx-auto rounded-full flex items-center justify-center mb-4">
+        <a href="https://en.halalbooking.com/places?halal_filters[]=30&page_currency=USD&location_id=189&groups[]=2&remember_search_params=true" target="_blank" class="text-white text-[20px] font-monserrat">
+            Discover more similar places
+        </a>
+    </div>
+    </div>
+
+    <!-- Mosques Section -->
+    <div id="mosques" class="w-full flex items-center justify-center mb-16">
+        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Mosques</h2>
+    </div>
+
+    <div class="flex-grow flex items-center">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto">
+            <!-- Mosque Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/fahd.jpg" alt="King Fahd Mosque" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">King Fahd Mosque</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Alipašina bb, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 123456</p>
+                    <p class="text-sm text -gray-700"><strong>Working Time:</strong> 05:00 AM - 09:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Mosque Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/luzani.jpeg" alt="Luzani Mosque" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Luzani Mosque</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Luzani, Ilidza, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 654321</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 06:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Mosque Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/begova.jpg" alt="Gazi Husrev-beg Mosque" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Gazi Husrev-beg Mosque</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Sarači 8, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 789456</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 04:00 AM - 08:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Mosque Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/ius.png" alt="IUS Mosque" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">IUS Mosque</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Hrasnička cesta 15, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 654987</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 05:00 AM - 09:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-16 mb-8">
+        <div class="mx-auto rounded-full flex items-center justify-center">
+            <a href="https://www.google.com/maps/@/data=!3m1!4b1!4m3!11m2!2sEi1jzhsyTx6aUlz-UTzKjg!3e3" target="_blank" class="text-white text-[20px] font-monserrat">
+                Discover more similar places
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+            <!-- Left Side: MC Logo -->
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="flex items-center">
+                    <img src="images/logo.png" class="h-12 mr-3" alt="Muslim Connect Logo" />
+                    <span class="absolute-left text-2xl font-semibold whitespace-nowrap dark:text-white">Muslim Connect</span>
+                </a>
+            </div>
+            <footer
+  class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white lg:text-left">
+  <div class="container p-6">
+    <div class="grid gap-4 lg:grid-cols-2">
+      <div class="mb-6 md:mb-0">
+        <h5 class="mb-2 font-medium uppercase">Footer text</h5>
+
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+          atque ea quis molestias. Fugiat pariatur maxime quis culpa
+          corporis vitae repudiandae aliquam voluptatem veniam, est atque
+          cumque eum delectus sint!
+        </p>
+      </div>
+            
+            <!-- Footer Links -->
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Halal Restaurants</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Local Mosques</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://www.facebook.com/chimiin03" class="hover:underline">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/chimiin03/" class="hover:underline">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/amina-jusic/" class="hover:underline">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <p>Email: <a href="mailto:chimiin03@gmail.com" class="hover:underline">chimiin03@gmail.com</a></p>
+                        </li>
+                        <li>
+                            <p>Phone: +38762345678</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Muslim Connect. All Rights Reserved.</span>
+            <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-5">
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                    <span class="sr-only">Discord</span>
+                </a>
+                <!-- Add other social icons here -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Link the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
