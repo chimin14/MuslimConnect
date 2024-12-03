@@ -63,6 +63,7 @@
         }
     </style>
 </head>
+<section id="home">
 <body class="bg-softGray text-blackMain">
     <!-- Full-screen Header Section -->
     <header class="relative w-full h-screen flex flex-col justify-between" style="background-image: url('images/isfahan.jpg'); background-size: cover; background-position: center;">
@@ -80,9 +81,9 @@
             <nav class="flex space-x-4">
                 <a href="#home" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Home</a>
                 <a href="#about" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">About Us</a>
-                <a href="#mosques" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Mosques</a>
-                <a href="#hotels" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Hotels</a>
                 <a href="#restaurants" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Restaurants</a>
+                <a href="#hotels" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Hotels</a>
+                <a href="#mosques" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Mosques</a>
                 <a href="#events" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Events</a>
                 <a href="#contact" class="text-gray-300 hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Contact Us!</a>
             </nav>
@@ -128,12 +129,12 @@
             </svg>
         </div>
     </header>
+</section>
 
 
 
 
-
-<!--  Section: Restaurants, Hotels, and Mosques -->
+<!--  Sections: Restaurants, Hotels, Mosques and Events-->
 <section id="places" class="bg-gradient-to-b from-black to-darkGreen min-h-screen flex flex-col justify-center">
     <!-- Restaurants Section -->
     <div id="restaurants" class="w-full flex items-center justify-center mb-16">
@@ -308,15 +309,65 @@
             </a>
         </div>
     </div>
+    <!-- Events Section -->
+    <div id="events" class="w-full flex items-center justify-center mb-16">
+        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Events</h2>
+    </div>
+
+    <div class="flex-grow flex items-center mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto">
+            <!-- Event Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/sac.jpg" alt="Sač" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Sač</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Baščaršija 10, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 123456</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 10:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+            <!-- Event Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/mrkva.jpg" alt="Mrkva" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Mrkva</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Baščaršija 12, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 654321</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 09:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            <!-- Event Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/bazeni.jpg" alt="Bazeni" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Bazeni</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Obala Kulina Bana 8, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 789456</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 11:00 AM - 12:00 AM</p>
+                </div>
+            </div>
+            <!-- Event Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img src="images/preporod.jpg" alt="Preporod" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-darkGreen">Preporod</h3>
+                    <p class="text-sm text-gray-700"><strong>Address:</strong> Branilaca Sarajeva 30, Sarajevo</p>
+                    <p class="text-sm text-gray-700"><strong>Phone:</strong> +387 33 789456</p>
+                    <p class="text-sm text-gray-700"><strong>Working Time:</strong> 11:00 AM - 12:00 AM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
+
+
 
 <!-- Footer -->
 <footer class="bg-white dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
+    <div class="mx-auto felx felx-col md:flex-row items-center justify-between">
             <!-- Left Side: MC Logo -->
-            <div class="mb-6 md:mb-0">
-                <a href="#" class="flex items-center">
+                <a href="#" class="flex items-center mb-4 md:mb-0 ">
                     <img src="images/logo.png" class="h-12 mr-3" alt="Muslim Connect Logo" />
                     <span class="absolute-left text-2xl font-semibold whitespace-nowrap dark:text-white">Muslim Connect</span>
                 </a>
@@ -325,14 +376,15 @@
   class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white lg:text-left">
   <div class="container p-6">
     <div class="grid gap-4 lg:grid-cols-2">
-      <div class="mb-6 md:mb-0">
-        <h5 class="mb-2 font-medium uppercase">Footer text</h5>
+      <div id = "about" class="mb-6 md:mb-0">
+        <h5 class="mb-2 font-medium uppercase">About us </h5>
 
-        <p class="mb-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-          atque ea quis molestias. Fugiat pariatur maxime quis culpa
-          corporis vitae repudiandae aliquam voluptatem veniam, est atque
-          cumque eum delectus sint!
+        <p class="mb-4"> 
+            Muslim Connect is a platform dedicated to bridging the gap between travelers and the Muslim community by 
+            providing curated information about halal restaurants, mosques, and accommodations. Our goal is to simplify 
+            your journey while ensuring comfort and inclusivity. This website was developed as part of an academic project,
+            aiming to showcase web development skills and promote cultural understanding. All of the redirecting links and images 
+            are placeholders and should be replaced with actual data.
         </p>
       </div>
             
@@ -355,15 +407,15 @@
                         <li class="mb-4">
                             <a href="https://www.facebook.com/chimiin03" class="hover:underline">Facebook</a>
                         </li>
-                        <li>
+                        <li class="mb-4">
                             <a href="https://www.instagram.com/chimiin03/" class="hover:underline">Instagram</a>
                         </li>
-                        <li>
+                        <li class="mb-4">
                             <a href="https://www.linkedin.com/in/amina-jusic/" class="hover:underline">LinkedIn</a>
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div id="contact">
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
@@ -380,21 +432,26 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Muslim Connect. All Rights Reserved.</span>
             <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-5">
-                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <!-- Facebook Icon -->
+                <a href="https://www.facebook.com/chimiin03" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd" />
                     </svg>
                     <span class="sr-only">Facebook</span>
                 </a>
-                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+        
+                <!-- Gmail Icon -->
+                <a href="mailto:chimiin03@gmail.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
                     </svg>
-                    <span class="sr-only">Discord</span>
+                    <span class="sr-only">Gmail</span>
                 </a>
-                <!-- Add other social icons here -->
+        
+                <!-- Add other icons here if needed -->
             </div>
         </div>
+        
     </div>
 </footer>
 
