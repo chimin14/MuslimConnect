@@ -1,0 +1,135 @@
+{
+    "restaurants": [
+      {
+        "name": "Sač",
+        "address": "Baščaršija 10, Sarajevo",
+        "phone": "+387 33 123456",
+        "workingTime": "10:00 AM - 11:00 PM",
+        "website": "https://www.tripadvisor.com/Restaurant_Review-g294450-d1145549-Reviews-Buregdzinica_Sac-Sarajevo_Sarajevo_Canton_Federation_of_Bosnia_and_Herzegovina.html",
+        "image": "images/sac.jpg"
+      },
+      {
+        "name": "Mrkva",
+        "address": "Baščaršija 12, Sarajevo",
+        "phone": "+387 33 654321",
+        "workingTime": "09:00 AM - 10:00 PM",
+        "website": "https://www.mrkva.ba/",
+        "image": "images/mrkva.jpg"
+      },
+      {
+        "name": "Bazeni",
+        "address": "Obala Kulina Bana 8, Sarajevo",
+        "phone": "+387 33 789456",
+        "workingTime": "11:00 AM - 12:00 AM",
+        "website": "https://www.restoranbazeni.com/",
+        "image": "images/bazeni.jpg"
+      },
+      {
+        "name": "Preporod",
+        "address": "Branilaca Sarajeva 30, Sarajevo",
+        "phone": "+387 33 789456",
+        "workingTime": "11:00 AM - 12:00 AM",
+        "website": "https://www.facebook.com/PreporodRestoran/?locale=hr_HR",
+        "image": "images/preporod.jpg"
+      }
+    ],
+    "hotels": [
+      {
+        "name": "Inn Mariott",
+        "address": "Skenderija 10, Sarajevo",
+        "phone": "+387 33 987654",
+        "workingTime": "24/7",
+        "website": "https://www.marriott.com/en-us/hotels/sjjri-residence-inn-sarajevo/overview/",
+        "image": "images/inmariot.png"
+      },
+      {
+        "name": "Malak Regency",
+        "address": "Ilidza 9, Sarajevo",
+        "phone": "+387 33 876543",
+        "workingTime": "24/7",
+        "website": "https://www.malakregency.com/",
+        "image": "images/malak.png"
+      },
+      {
+        "name": "Rose Apartment",
+        "address": "Bjelasnica 15, Sarajevo",
+        "phone": "+387 33 765432",
+        "workingTime": "24/7",
+        "website": "https://www.booking.com/hotel/ba/guesthouse-rose.hr.html",
+        "image": "images/rose.png"
+      },
+      {
+        "name": "Pino Nature",
+        "address": "Trebevic 20, Sarajevo",
+        "phone": "+387 33 654321",
+        "workingTime": "24/7",
+        "website": "https://www.pino-hotel.com/",
+        "image": "images/pino.png"
+      }
+    ],
+    "mosques": [
+      {
+        "name": "King Fahd Mosque",
+        "address": "Alipašina bb, Sarajevo",
+        "phone": "+387 33 123456",
+        "workingTime": "05:00 AM - 09:00 PM",
+        "website": "https://www.google.com/maps/place/D%C5%BEamija+Kralj+Fahd",
+        "image": "images/fahd.jpg"
+      },
+      {
+        "name": "Luzani Mosque",
+        "address": "Luzani, Ilidza, Sarajevo",
+        "phone": "+387 33 654321",
+        "workingTime": "06:00 AM - 10:00 PM",
+        "website": "https://www.google.com/maps/place/D%C5%BEamija+Lu%C5%BEani",
+        "image": "images/luzani.jpeg"
+      },
+      {
+        "name": "Gazi Husrev-beg Mosque",
+        "address": "Sarači 8, Sarajevo",
+        "phone": "+387 33 789456",
+        "workingTime": "04:00 AM - 08:00 PM",
+        "website": "https://www.google.com/maps/place/Gazi+Husrev-begova+d%C5%BEamija",
+        "image": "images/begova.jpg"
+      },
+      {
+        "name": "IUS Mosque",
+        "address": "Hrasnička cesta 15, Sarajevo",
+        "phone": "+387 33 654987",
+        "workingTime": "05:00 AM - 09:00 PM",
+        "website": "https://www.google.com/maps/place/IUS+Masjid",
+        "image": "images/ius.png"
+      }
+    ],
+    "events": [
+      {
+        "title": "Find Your Purpose",
+        "location": "Istiklal Mosque Otoka, Sarajevo",
+        "date": "Every Saturday at 7:00 AM",
+        "link": "https://www.facebook.com/sarajevskimedzlis.ba/?locale=hr_HR",
+        "image": "images/events1.jpg"
+      },
+      {
+        "title": "Halal Fair",
+        "location": "Hollywood Hotel Ilidza, Sarajevo",
+        "date": "May 17 - May 19, 2023",
+        "link": "https://www.sarajevohalalfair.com/",
+        "image": "images/event2.jpg"
+      },
+      {
+        "title": "The Life of Prophet Isa",
+        "location": "South Bedford Masjid 5, UK",
+        "date": "December 14, 2024",
+        "link": "https://muslimevent.co.uk/event/the-life-of-prophet-isaas-part-1/",
+        "image": "images/event3.jpg"
+      },
+      {
+        "title": "Art of Communication",
+        "location": "Markfield Conference Centre, UK",
+        "date": "December 20, 2024",
+        "link": "https://muslimevent.co.uk/event/the-art-of-communication/",
+        "image": "images/events4.jpg"
+      }
+    ]
+  }
+  
