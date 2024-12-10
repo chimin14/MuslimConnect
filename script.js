@@ -68,6 +68,7 @@ function populateSection(containerId, items, isEvent = false) {
         `;
         container.innerHTML += card;
     });
+}
 
 // Arrow Scroll Functionality
 const scrollArrow = document.getElementById('scrollArrow');
@@ -81,5 +82,47 @@ scrollArrow.addEventListener('click', () => {
         });
     }
 });
+    // Translation API Functionality
+    const API_URL = "https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-en-ar";
+    const API_TOKEN = "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"; // Replace with your actual API token
 
-}
+    async function translateText(text) {
+        try {
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${API_TOKEN}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ inputs: text }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error: ${response.statusText}`);
+            }
+
+            const result = await response.json();
+            return result[0]?.translation_text || "Translation failed.";
+        } catch (error) {
+            console.error("Translation Error:", error);
+            return "An error occurred during translation.";
+        }
+    }
+
+    // Translate Button
+    const translateButton = document.getElementById("translate-button");
+    const contentToTranslate = document.getElementById("content-to-translate");
+    const translatedContent = document.getElementById("translated-content");
+
+    translateButton.addEventListener("click", async () => {
+        if (!contentToTranslate) {
+            console.error("Content to translate not found.");
+            return;
+        }
+
+        const originalText = contentToTranslate.textContent;
+        translatedContent.textContent = "Translating...";
+
+        const translatedText = await translateText(originalText);
+        translatedContent.textContent = translatedText;
+    });

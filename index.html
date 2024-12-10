@@ -78,20 +78,29 @@
                 <h1 class="text-3xl font-kanit text-white ml-4">Muslim Connect</h1>
             </div>
 
-            <!-- Navigation Buttons -->
+             <!-- Navigation Buttons -->
             <nav class="flex space-x-4">
                 <a href="#home" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Home</a>
                 <a href="#about" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">About Us</a>
                 <a href="#contact" class="text-gray-300 hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Contact Us!</a>
             </nav>
-
-            <!-- Sidebar Button -->
-            <button id="sidebarButton" class="p-2 text-black rounded">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            
+            <!-- Buttons -->
+            <div class="flex items-center space-x-4">
+                <!-- Sidebar Button -->
+                <button id="sidebarButton" class="p-2 text-black rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                
+                <!-- Translate Button -->
+                <button id="translate-button" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
+                    Translate
+                </button>
+            </div>
         </div>
+
 
         <!-- Sidebar Component -->
         <div id="drawer-navigation" class="fixed top-0 right-0 z-50 w-64 h-screen bg-white dark:bg-gray-800 hidden-sidebar transition-transform duration-300 ease-in-out shadow-lg">
@@ -115,11 +124,14 @@
         <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-kanit mb-6">
             Welcome to Muslim Connect
         </h1>
-        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-roboto leading-relaxed max-w-2xl md:max-w-3xl mx-auto">
+        <p id="content-to-translate" class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-roboto leading-relaxed max-w-2xl md:max-w-3xl mx-auto">
             At Muslim Connect, we are dedicated to bridging the gap between travelers and the local Muslim community. Whether you're searching for halal restaurants, mosques, or accommodations that cater to your needs, our platform is here to guide you.
         </p>
+        <div id="translated-content" class="mt-4 text-lg font-roboto text-gray-200"></div>
+    </div>
     </div>
 </div>
+
 
 
         <!-- Arrow -->
