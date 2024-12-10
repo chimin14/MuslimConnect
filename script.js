@@ -68,4 +68,18 @@ function populateSection(containerId, items, isEvent = false) {
         `;
         container.innerHTML += card;
     });
+
+// Arrow Scroll Functionality
+const scrollArrow = document.getElementById('scrollArrow');
+
+scrollArrow.addEventListener('click', () => {
+    const nextSection = document.querySelector('section:nth-of-type(2)'); // Adjust this to target the next section
+    if (nextSection) {
+        nextSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+});
+
 }

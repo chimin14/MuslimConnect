@@ -62,6 +62,7 @@
             }
         }
     </style>
+    
 </head>
 <section id="home">
 <body class="bg-softGray text-blackMain">
@@ -81,10 +82,6 @@
             <nav class="flex space-x-4">
                 <a href="#home" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Home</a>
                 <a href="#about" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">About Us</a>
-                <a href="#restaurants" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Restaurants</a>
-                <a href="#hotels" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Hotels</a>
-                <a href="#mosques" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Mosques</a>
-                <a href="#events" class="text-white hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Events</a>
                 <a href="#contact" class="text-gray-300 hover:bg-orange-500 hover:text-white transition-colors duration-200 rounded-md px-4 py-2">Contact Us!</a>
             </nav>
 
@@ -103,27 +100,30 @@
                 <ul class="space-y-2 font-medium">
                     <li><a href="#home" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
                     <li><a href="#about" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">About Us</a></li>
-                    <li><a href="#mosques" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Mosques</a></li>
-                    <li><a href="#hotels" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Hotels</a></li>
                     <li><a href="#restaurants" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Restaurants</a></li>
+                    <li><a href="#hotels" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Hotels</a></li>
+                    <li><a href="#mosques" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Mosques</a></li>
                     <li><a href="#events" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Events</a></li>
                     <li><a href="#contact" class="block p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Contact Us</a></li>
                 </ul>
             </div>
         </div>
 
-        <!-- Welcome Section -->
-        <div class="flex-grow flex items-center justify-center">
-            <div class="relative text-white text-center px-8">
-                <h1 class="text-9xl font-kanit mb-6">Welcome to Muslim Connect</h1>
-                <p class="text-3xl font-roboto leading-relaxed max-w-3xl mx-auto">
-                    At Muslim Connect, we are dedicated to bridging the gap between travelers and the local Muslim community. Whether you're searching for halal restaurants, mosques, or accommodations that cater to your needs, our platform is here to guide you.
-                </p>
-            </div>
-        </div>
+       <!-- Welcome Section -->
+<div class="flex-grow flex items-center justify-center">
+    <div class="relative text-white text-center px-6 sm:px-8">
+        <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-kanit mb-6">
+            Welcome to Muslim Connect
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-roboto leading-relaxed max-w-2xl md:max-w-3xl mx-auto">
+            At Muslim Connect, we are dedicated to bridging the gap between travelers and the local Muslim community. Whether you're searching for halal restaurants, mosques, or accommodations that cater to your needs, our platform is here to guide you.
+        </p>
+    </div>
+</div>
+
 
         <!-- Arrow -->
-        <div class="relative z-10 flex justify-center mb-8">
+        <div id ="scrollArrow" class="relative z-10 flex justify-center mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 animate-bounce" fill="white" viewBox="0 0 24 24" stroke="white">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
@@ -134,32 +134,33 @@
 
 
 
-<!--  Sections: Restaurants, Hotels, Mosques and Events-->
+<!--  Sections: Restaurants, Hotels, Mosques, and Events -->
 <section id="places" class="bg-gradient-to-b from-black to-darkGreen min-h-screen flex flex-col justify-center">
     <!-- Restaurants Section -->
     <div id="restaurants" class="w-full flex items-center justify-center mb-16">
-        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Restaurants</h2>
+        <h2 class="text-white text-4xl md:text-5xl font-kanit uppercase tracking-wide mt-24">Restaurants</h2>
     </div>
-    <div id="restaurants-container" class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto"></div>
+    <div id="restaurants-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-6 md:px-12 mx-auto"></div>
 
     <!-- Hotels Section -->
     <div id="hotels" class="w-full flex items-center justify-center mb-16">
-        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Hotels</h2>
+        <h2 class="text-white text-4xl md:text-5xl font-kanit uppercase tracking-wide mt-24">Hotels</h2>
     </div>
-    <div id="hotels-container" class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto"></div>
+    <div id="hotels-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-6 md:px-12 mx-auto"></div>
 
     <!-- Mosques Section -->
     <div id="mosques" class="w-full flex items-center justify-center mb-16">
-        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Mosques</h2>
+        <h2 class="text-white text-4xl md:text-5xl font-kanit uppercase tracking-wide mt-24">Mosques</h2>
     </div>
-    <div id="mosques-container" class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto"></div>
+    <div id="mosques-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-6 md:px-12 mx-auto"></div>
 
     <!-- Events Section -->
     <div id="events" class="w-full flex items-center justify-center mb-16">
-        <h2 class="text-white text-5xl font-kanit uppercase tracking-wide mt-24">Events</h2>
+        <h2 class="text-white text-4xl md:text-5xl font-kanit uppercase tracking-wide mt-24">Events</h2>
     </div>
-    <div id="events-container" class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 mx-auto"></div>
+    <div id="events-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-6 md:px-12 mx-auto mb-32"></div>
 </section>
+
 
 
 <!-- Footer -->
