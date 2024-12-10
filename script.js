@@ -84,7 +84,7 @@ scrollArrow.addEventListener('click', () => {
 });
     // Translation API Functionality
     const API_URL = "https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-en-ar";
-    const API_TOKEN = "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"; // Replace with your actual API token
+    const API_TOKEN = "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";
 
     async function translateText(text) {
         try {
